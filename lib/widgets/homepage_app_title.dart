@@ -31,21 +31,21 @@ class AppTitle extends StatelessWidget {
             children: [
               Text(
                 '$thisDay,',
-                style: Theme.of(context).textTheme.headline2,
+                style: Theme.of(context).textTheme.headline3,
               ),
               SizedBox(
                 width: 5,
               ),
               Text(
                 thisDate,
-                style: Theme.of(context).textTheme.headline2,
+                style: Theme.of(context).textTheme.headline3,
               ),
               SizedBox(
                 width: 4,
               ),
               Text(
                 thisMonth,
-                style: Theme.of(context).textTheme.headline2,
+                style: Theme.of(context).textTheme.headline3,
               ),
             ],
           ),

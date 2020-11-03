@@ -10,10 +10,9 @@ class HomePage extends StatelessWidget {
       backgroundColor: Color(0xFFECF3F8),
       body: SafeArea(
         child: Container(
-          margin: EdgeInsets.only(
-            top: 10,
-            left: 32,
-            right: 32,
+          margin: EdgeInsets.symmetric(
+            horizontal: 28,
+            vertical: 10,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
