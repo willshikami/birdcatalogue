@@ -1,3 +1,4 @@
+import 'package:birdcatalogue/widgets/common_birds.dart';
 import 'package:flutter/material.dart';
 
 import 'package:birdcatalogue/widgets/homepage_app_title.dart';
@@ -19,6 +20,7 @@ class HomePage extends StatelessWidget {
             children: [
               AppTitle(),
               BirdOfTheDay(),
+              CommonBirds(),
             ],
           ),
         ),

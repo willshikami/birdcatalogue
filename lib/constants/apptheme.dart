@@ -28,6 +28,10 @@ ThemeData appTheme() {
         fontSize: 18.0,
         fontStyle: FontStyle.normal,
       ),
+      headline4: TextStyle(
+        fontSize: 18.0,
+        fontWeight: FontWeight.bold,
+      ),
       bodyText1: TextStyle(
         fontSize: 14.0,
       ),
