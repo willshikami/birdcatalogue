@@ -1,3 +1,4 @@
+import 'package:birdcatalogue/routes/route_generator.dart';
 import 'package:flutter/material.dart';
 
 import 'package:birdcatalogue/constants/apptheme.dart';
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: HomePage(),
       theme: appTheme(),
+      onGenerateRoute: RouterGenerator.generateRoute,
     );
   }
 }
