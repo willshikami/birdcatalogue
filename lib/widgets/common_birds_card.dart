@@ -2,6 +2,16 @@ import 'package:birdcatalogue/constants/apptheme.dart';
 import 'package:flutter/material.dart';
 
 class CommonBirds extends StatelessWidget {
+  final String imageUrl;
+  final String birdName;
+  final String scientificName;
+
+  CommonBirds({
+    @required this.imageUrl,
+    @required this.birdName,
+    @required this.scientificName,
+  });
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -21,7 +31,7 @@ class CommonBirds extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset(
-                'assets/images/spotlight.jpg',
+                this.imageUrl,
                 fit: BoxFit.fill,
                 // height: size.width * 0.45,
               ),
@@ -31,7 +41,7 @@ class CommonBirds extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Blue-headed bee-eater',
+                      birdName,
                       overflow: TextOverflow.ellipsis,
                       style: Theme.of(context).textTheme.bodyText1.copyWith(
                             color: appTheme().textSelectionColor,
@@ -41,7 +51,7 @@ class CommonBirds extends StatelessWidget {
                       height: 2,
                     ),
                     Text(
-                      'Merops muelleri',
+                      scientificName,
                       style: Theme.of(context).textTheme.bodyText2.copyWith(
                             color: appTheme().textSelectionHandleColor,
                           ),

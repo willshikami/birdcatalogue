@@ -1,8 +1,24 @@
-import 'package:birdcatalogue/constants/apptheme.dart';
-import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter/material.dart';
 
-class AppTitle extends StatelessWidget {
+import 'package:birdcatalogue/constants/apptheme.dart';
+
+class AppTitle extends StatefulWidget {
+  _AppTitleState createState() => _AppTitleState();
+}
+
+class _AppTitleState extends State<AppTitle> {
+  // @override
+  // void initState() {
+  //   super.initState();
+
+  //   WidgetsBinding.instance.addObserver(
+  //     new LifecycleEventHandler(
+  //       resumeCallBack: () async => _refreshContent(),
+  //     ),
+  //   );
+  // }
+
   final thisDay = DateFormat.EEEE().format(DateTime.now());
   final thisMonth = DateFormat.MMMM().format(DateTime.now());
   final thisDate = DateFormat.d().format(DateTime.now());
@@ -17,11 +33,20 @@ class AppTitle extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           //The day
-          Text(
-            'Today',
-            style: Theme.of(context).textTheme.headline1.copyWith(
-                  color: appTheme().textSelectionColor,
-                ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Today',
+                style: Theme.of(context).textTheme.headline1.copyWith(
+                      color: appTheme().textSelectionColor,
+                    ),
+              ),
+              Icon(
+                Icons.search,
+                size: 28,
+              )
+            ],
           ),
           SizedBox(
             height: 5,
