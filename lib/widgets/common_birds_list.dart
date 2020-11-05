@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
 
 class CommonBirdsList extends StatefulWidget {
   _CommonBirdsListState createState() => _CommonBirdsListState();
@@ -8,33 +8,29 @@ class CommonBirdsList extends StatefulWidget {
 class _CommonBirdsListState extends State<CommonBirdsList> {
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder<QuerySnapshot>(
-      stream:
-          FirebaseFirestore.instance.collection('cranes-allies').snapshots(),
-      builder: (context, snapshot) {
-        return !snapshot.hasData
-            ? Center(
-                child: CircularProgressIndicator(),
-              )
-            : ListView.builder(
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                physics: ScrollPhysics(),
-                itemCount: snapshot.data.docs.length,
-                itemBuilder: (context, index) {
-                  final data = snapshot.data.docs[index];
-
-                  return Container(
-                    // height: 5,
-                    child: Text(
-                      data[index].birdName,
-                      style: TextStyle(
-                        color: Colors.black,
-                      ),
-                    ),
-                  );
-                });
-      },
-    );
+    return Container();
+    // return StreamBuilder<QuerySnapshot>(
+    //   stream:
+    //       FirebaseFirestore.instance.collection('cranes-allies').snapshots(),
+    //   builder: (context, snapshot) {
+    //     // print(snapshot.data.docs);
+    //     return !snapshot.hasData
+    //         ? Center(
+    //             child: CircularProgressIndicator(),
+    //           )
+    //         : ListView.builder(
+    //             shrinkWrap: true,
+    //             // physics: ScrollPhysics(),
+    //             itemCount: snapshot.data.docs.length,
+    //             itemBuilder: (context, index) {
+    //               final data = snapshot.data.docs[index]['blackCrownedCrane']
+    //                   ['birdName'];
+    //               print('=============$data===============');
+    //               return Expanded(
+    //                 child: Text(''),
+    //               );
+    //             });
+    //   },
+    // );
   }
 }

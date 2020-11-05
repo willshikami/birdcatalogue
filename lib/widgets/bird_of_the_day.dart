@@ -9,6 +9,7 @@ class BirdOfTheDay extends StatefulWidget {
 class _BirdOfTheDayState extends State<BirdOfTheDay> {
   @override
   Widget build(BuildContext context) {
+    // Size size = MediaQuery.of(context).size;
     return InkWell(
       child: Card(
         elevation: 0,
@@ -18,46 +19,52 @@ class _BirdOfTheDayState extends State<BirdOfTheDay> {
           borderRadius: BorderRadius.circular(10.0),
         ),
         color: Theme.of(context).splashColor,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: Stack(
           children: [
             Image.asset(
               'assets/images/spotlight.jpg',
               fit: BoxFit.fill,
             ),
-            Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: 16,
-                vertical: 12,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Learn more about',
-                    style: Theme.of(context).textTheme.headline3.copyWith(
-                          color: appTheme().accentColor,
-                        ),
-                  ),
-                  SizedBox(
-                    height: 16,
-                  ),
-                  Text(
-                    'Blue-headed bee-eater',
-                    style: Theme.of(context).textTheme.headline2.copyWith(
-                          color: appTheme().textSelectionColor,
-                        ),
-                  ),
-                  SizedBox(
-                    height: 2,
-                  ),
-                  Text(
-                    'Merops muelleri',
-                    style: Theme.of(context).textTheme.headline3.copyWith(
-                          color: appTheme().textSelectionHandleColor,
-                        ),
-                  ),
-                ],
+            Positioned(
+              bottom: 0,
+              child: Container(
+                color: Colors.black.withOpacity(0.05),
+                padding: EdgeInsets.only(
+                  right: 164,
+                  left: 16,
+                  top: 12,
+                  bottom: 12,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Learn more about',
+                      style: Theme.of(context).textTheme.headline3.copyWith(
+                            color: appTheme().accentColor,
+                          ),
+                    ),
+                    SizedBox(
+                      height: 12,
+                    ),
+                    Text(
+                      'Blue-headed bee-eater',
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.headline2.copyWith(
+                            color: appTheme().splashColor,
+                          ),
+                    ),
+                    SizedBox(
+                      height: 2,
+                    ),
+                    Text(
+                      'Merops muelleri',
+                      style: Theme.of(context).textTheme.headline3.copyWith(
+                            color: appTheme().splashColor,
+                          ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

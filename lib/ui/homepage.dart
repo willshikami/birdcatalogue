@@ -1,4 +1,5 @@
 import 'package:birdcatalogue/widgets/common_birds.dart';
+import 'package:birdcatalogue/widgets/common_birds_title.dart';
 import 'package:flutter/material.dart';
 
 import 'package:birdcatalogue/widgets/homepage_app_title.dart';
@@ -12,15 +13,25 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.symmetric(
-            horizontal: 28,
+            horizontal: 18,
             vertical: 10,
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: ListView(
+            shrinkWrap: true,
             children: [
               AppTitle(),
               BirdOfTheDay(),
-              CommonBirds(),
+              CommonBirdsSectionTitle(),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    CommonBirds(),
+                    CommonBirds(),
+                    CommonBirds(),
+                  ],
+                ),
+              )
             ],
           ),
         ),

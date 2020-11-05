@@ -21,19 +21,22 @@ ThemeData appTheme() {
         fontWeight: FontWeight.bold,
       ),
       headline2: TextStyle(
-        fontSize: 24.0,
+        fontSize: 18.0,
         fontWeight: FontWeight.bold,
       ),
       headline3: TextStyle(
-        fontSize: 18.0,
+        fontSize: 16.0,
         fontStyle: FontStyle.normal,
       ),
       headline4: TextStyle(
-        fontSize: 18.0,
+        fontSize: 16.0,
         fontWeight: FontWeight.bold,
       ),
       bodyText1: TextStyle(
         fontSize: 14.0,
+      ),
+      bodyText2: TextStyle(
+        fontSize: 12.0,
       ),
     ),
   );
