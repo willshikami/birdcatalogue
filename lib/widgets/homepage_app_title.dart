@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 
@@ -42,9 +43,11 @@ class _AppTitleState extends State<AppTitle> {
                       color: appTheme().textSelectionColor,
                     ),
               ),
-              Icon(
-                Icons.search,
-                size: 28,
+              InkWell(
+                child: Icon(
+                  CupertinoIcons.search,
+                  size: 32,
+                ),
               )
             ],
           ),

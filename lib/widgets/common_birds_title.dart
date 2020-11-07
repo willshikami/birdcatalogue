@@ -17,17 +17,17 @@ class CommonBirdsSectionTitle extends StatelessWidget {
           ),
           MaterialButton(
             elevation: 0,
-            color: appTheme().accentColor,
+            color: appTheme().splashColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16.0),
             ),
             onPressed: () {},
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 2, vertical: 6),
+              padding: EdgeInsets.symmetric(horizontal: 0, vertical: 4),
               child: Text(
-                'View more',
+                'MORE',
                 style: Theme.of(context).textTheme.bodyText1.copyWith(
-                      color: appTheme().splashColor,
+                      color: appTheme().accentColor,
                     ),
               ),
             ),

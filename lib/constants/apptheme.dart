@@ -32,6 +32,9 @@ ThemeData appTheme() {
         fontSize: 16.0,
         fontWeight: FontWeight.bold,
       ),
+      headline5: TextStyle(
+        fontSize: 16.0,
+      ),
       bodyText1: TextStyle(
         fontSize: 14.0,
       ),

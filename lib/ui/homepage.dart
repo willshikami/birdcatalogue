@@ -1,4 +1,5 @@
 import 'package:birdcatalogue/widgets/common_birds_card.dart';
+import 'package:birdcatalogue/widgets/common_birds_list.dart';
 import 'package:birdcatalogue/widgets/common_birds_title.dart';
 import 'package:flutter/material.dart';
 
@@ -22,28 +23,7 @@ class HomePage extends StatelessWidget {
               AppTitle(),
               BirdOfTheDay(),
               CommonBirdsSectionTitle(),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    CommonBirds(
-                      imageUrl: 'assets/images/spotlight.jpg',
-                      birdName: 'Blue-headed bee-eater',
-                      scientificName: 'Merops muelleri',
-                    ),
-                    CommonBirds(
-                      imageUrl: 'assets/images/spotlight.jpg',
-                      birdName: 'Blue-headed bee-eater',
-                      scientificName: 'Merops muelleri',
-                    ),
-                    CommonBirds(
-                      imageUrl: 'assets/images/spotlight.jpg',
-                      birdName: 'Blue-headed bee-eater',
-                      scientificName: 'Merops muelleri',
-                    ),
-                  ],
-                ),
-              )
+              CommonBirdsList(),
             ],
           ),
         ),
