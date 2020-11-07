@@ -9,17 +9,6 @@ class AppTitle extends StatefulWidget {
 }
 
 class _AppTitleState extends State<AppTitle> {
-  // @override
-  // void initState() {
-  //   super.initState();
-
-  //   WidgetsBinding.instance.addObserver(
-  //     new LifecycleEventHandler(
-  //       resumeCallBack: () async => _refreshContent(),
-  //     ),
-  //   );
-  // }
-
   final thisDay = DateFormat.EEEE().format(DateTime.now());
   final thisMonth = DateFormat.MMMM().format(DateTime.now());
   final thisDate = DateFormat.d().format(DateTime.now());

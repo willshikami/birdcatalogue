@@ -1,4 +1,3 @@
-import 'package:birdcatalogue/widgets/common_birds_card.dart';
 import 'package:birdcatalogue/widgets/common_birds_list.dart';
 import 'package:birdcatalogue/widgets/common_birds_title.dart';
 import 'package:flutter/material.dart';
