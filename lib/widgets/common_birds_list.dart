@@ -1,4 +1,3 @@
-// import 'package:birdcatalogue/constants/apptheme.dart';
 import 'package:birdcatalogue/constants/apptheme.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +44,7 @@ class _CommonBirdsListState extends State<CommonBirdsList> {
                       children: [
                         CachedNetworkImage(
                           height: size.width * 0.4,
-                          //TODO: width of image
+                          // TODO: width of image
                           // width: size.width * 0.4,
                           fit: BoxFit.fill,
                           imageUrl: imgUrl,
